@@ -31,9 +31,14 @@ header nav[aria-expanded='true'] {
 }
 
 @media (width >= 900px) {
-  header .nav-wrapper {
+  header {
     position: sticky;
     top: 0;
+    z-index: 2;
+  }
+
+  header .nav-wrapper {
+    position: relative;
   }
 
   header nav {
