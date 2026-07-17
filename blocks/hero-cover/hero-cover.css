@@ -61,12 +61,20 @@
 }
 
 /* --- Typography (white on green) --- */
+.hero-cover .hero-cover-content h1,
 .hero-cover .hero-cover-content h2 {
   margin: 0 0 8px;
   color: #fff;
-  font-size: 32px;
   font-weight: 500;
   line-height: 1.2;
+}
+
+.hero-cover .hero-cover-content h1 {
+  font-size: 40px;
+}
+
+.hero-cover .hero-cover-content h2 {
+  font-size: 32px;
 }
 
 .hero-cover .hero-cover-content p {
