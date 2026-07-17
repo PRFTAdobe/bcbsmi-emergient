@@ -114,7 +114,7 @@
 
 /* --- Desktop: constrain the green panel to a left-aligned column --- */
 @media (width >= 900px) {
-  .hero-cover .hero-cover-content {
+  .hero-cover:not(.hero-cover-banner) .hero-cover-content {
     flex: 0 0 auto;
     width: 475px;
     max-width: 50%;
@@ -122,8 +122,33 @@
     padding: 48px 16px;
   }
 
-  .hero-cover .hero-cover-content > div {
+  .hero-cover:not(.hero-cover-banner) .hero-cover-content > div {
     max-width: 100%;
     padding: 0 24px;
   }
+}
+
+/* --- Interior banner variant: short, full-width, title bottom-left --- */
+.hero-cover.hero-cover-banner {
+  min-height: 300px;
+  align-items: stretch;
+}
+
+.hero-cover.hero-cover-banner .hero-cover-content {
+  min-height: 300px;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 24px;
+  background-color: rgb(0 92 94 / 30%);
+}
+
+.hero-cover.hero-cover-banner .hero-cover-content > div {
+  width: 100%;
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-cover.hero-cover-banner .hero-cover-content h1 {
+  margin: 0;
 }
