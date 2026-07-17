@@ -9,11 +9,17 @@ footer .footer > div {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
+  justify-content: flex-end;
+  gap: 16px 32px;
   margin: auto;
   max-width: 1320px;
   padding: 24px;
+}
+
+/* links + copyright column: grow to fill, right-align text next to the flag */
+footer .footer > div > div:first-child {
+  flex: 1 1 auto;
+  text-align: right;
 }
 
 footer .footer p {
@@ -50,11 +56,16 @@ footer .footer img {
   width: auto;
 }
 
-/* mobile: stack links row above the flag logo */
+/* mobile: stack links row above the flag logo, left-aligned */
 @media (width < 900px) {
   footer .footer > div {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  footer .footer > div > div:first-child {
+    text-align: left;
   }
 
   footer .footer p a {
