@@ -1,0 +1,19 @@
+:root {
+  --heading-font-family: "Titillium Web", sans-serif;
+  --body-font-family: "Titillium Web", sans-serif;
+  --background-color: #fff;
+  --text-color: #0e0e0e;
+  --link-color: #ff4814;
+  --link-hover-color: #cc3a10;
+  --brand-red: #ff4814;
+  --brand-red-dark: #cc3a10;
+  --section-padding: 0px;
+  --content-max-width: 1320px;
+  --nav-height: 76px;
+  --heading-size-xxl: 40px;
+  --heading-size-xl: 32px;
+  --heading-size-l: 24px;
+  --heading-size-m: 20px;
+  --heading-size-s: 18px;
+  --heading-size-xs: 16px;
+}

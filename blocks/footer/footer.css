@@ -1,20 +1,64 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: #003b4a;
+  color: #fff;
+  font-family: var(--body-font-family);
+  font-size: 16px;
 }
 
 footer .footer > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
   margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+  max-width: 1320px;
+  padding: 24px;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
+/* spacing between the inline legal links */
+footer .footer p a {
+  margin-right: 8px;
+}
+
+footer .footer a:any-link {
+  color: #d3dde6;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Code of Conduct (PDF link) uses brand red */
+footer .footer a[href$=".pdf"] {
+  color: var(--brand-red);
+}
+
+footer .footer a[href$=".pdf"]:hover {
+  color: #fff;
+}
+
+/* flag logo on the right */
+footer .footer img {
+  height: 92px;
+  width: auto;
+}
+
+/* mobile: stack links row above the flag logo */
+@media (width < 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer .footer p a {
+    display: inline-block;
+    margin-bottom: 4px;
   }
 }

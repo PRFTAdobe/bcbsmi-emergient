@@ -1,6 +1,6 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #f7f8fa;
   width: 100%;
   z-index: 2;
   position: fixed;
@@ -72,7 +72,7 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: #f7f8fa;
   color: inherit;
   overflow: initial;
   text-overflow: initial;
@@ -142,15 +142,13 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 /* brand */
 header .nav-brand {
   grid-area: brand;
-  flex-basis: 128px;
-  font-size: var(--heading-font-size-s);
-  font-weight: 700;
+  flex-basis: auto;
   line-height: 1;
 }
 
 header nav .nav-brand img {
-  width: 128px;
-  height: auto;
+  width: auto;
+  height: 42px;
 }
 
 /* sections */
@@ -165,16 +163,35 @@ header nav[aria-expanded='true'] .nav-sections {
   display: block;
   visibility: visible;
   align-self: start;
+  margin: 0 -24px;
+  width: calc(100% + 48px);
 }
 
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
-  font-size: var(--body-font-size-s);
+  font-size: 16px;
 }
 
 header nav .nav-sections ul > li {
   font-weight: 500;
+}
+
+header nav .nav-sections a:any-link {
+  color: #111;
+}
+
+header nav .nav-sections a:hover {
+  color: #cc3a10;
+  text-decoration: none;
+}
+
+/* mobile: full-width flush menu items (counteract nav padding) */
+header nav[aria-expanded='true'] .nav-sections ul > li > a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 24px;
 }
 
 header nav .nav-sections ul > li > ul {
@@ -187,7 +204,8 @@ header nav .nav-sections ul > li > ul > li {
 
 @media (width >= 900px) {
   header nav .nav-sections {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
     visibility: visible;
     white-space: nowrap;
   }
@@ -224,8 +242,14 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 8px;
     margin: 0;
+    align-items: center;
+  }
+
+  header nav .nav-sections ul > li > a {
+    display: inline-block;
+    padding: 8px 14px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {

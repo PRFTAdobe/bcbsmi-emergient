@@ -1,0 +1,257 @@
+.form-contact [aria-hidden='true'] {
+  display: none;
+}
+
+.form-contact input,
+.form-contact textarea,
+.form-contact select,
+.form-contact button {
+  box-sizing: border-box;
+  display: block;
+  max-width: 100%;
+  font: inherit;
+}
+
+.form-contact input,
+.form-contact textarea,
+.form-contact select {
+  scroll-margin: 1em;
+  width: 100%;
+  border: 1px solid #d3dde6;
+  border-radius: 4px;
+  padding: 6px 12px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-contact textarea {
+  min-height: 240px;
+  resize: vertical;
+}
+
+.form-contact fieldset {
+  appearance: none;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.form-contact input:hover,
+.form-contact textarea:hover,
+.form-contact select:hover,
+.form-contact button:hover {
+  border-color: var(--link-color);
+}
+
+.form-contact input:focus,
+.form-contact textarea:focus,
+.form-contact select:focus,
+.form-contact button:focus {
+  outline-offset: 4px;
+}
+
+.form-contact input:disabled,
+.form-contact input:hover:disabled,
+.form-contact input:focus:disabled,
+.form-contact textarea:disabled,
+.form-contact textarea:hover:disabled,
+.form-contact textarea:focus:disabled,
+.form-contact select:disabled,
+.form-contact select:hover:disabled,
+.form-contact select:focus:disabled,
+.form-contact input[readonly],
+.form-contact textarea[readonly],
+.form-contact select[readonly] {
+  border-color: #d1d1d1;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.form-contact input[readonly]:focus,
+.form-contact textarea[readonly]:focus,
+.form-contact select[readonly]:focus {
+  outline: 0;
+}
+
+.form-contact input[type='checkbox'],
+.form-contact input[type='radio'] {
+  width: unset;
+}
+
+.form-contact label,
+.form-contact legend {
+  display: block;
+}
+
+.form-contact label[data-required]::after,
+.form-contact legend[data-required]::after {
+  content: '*';
+  margin-left: 0.25ch;
+  color: firebrick;
+}
+
+.form-contact .form-contact-field > label:first-child,
+.form-contact .form-contact-field > legend {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-color);
+}
+
+.form-contact .form-contact-field + .form-contact-field {
+  margin-top: 16px;
+}
+
+.form-contact .form-contact-field.checkbox-field label,
+.form-contact .form-contact-field.radio-field label {
+  position: relative;
+  padding-left: calc(1em + 1ch);
+  font-size: var(--body-font-size-s);
+  line-height: 44px;
+  cursor: pointer;
+}
+
+.form-contact .form-contact-field.checkbox-field label input,
+.form-contact .form-contact-field.radio-field label input,
+.form-contact .form-contact-field.toggle-field label input {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  margin: 0;
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+.form-contact .form-contact-field.checkbox-field label input:disabled,
+.form-contact .form-contact-field.radio-field label input:disabled {
+  cursor: default;
+}
+
+@media (width >= 600px) {
+  .form-contact .form-contact-field.checkbox-field,
+  .form-contact .form-contact-field.radio-field {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25ch 1em;
+  }
+}
+
+/* custom toggle field */
+.form-contact .form-contact-field.toggle-field label {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1ch;
+  min-height: 44px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.form-contact .form-contact-field.toggle-field label input {
+  width: 2em;
+  opacity: 0;
+  border-radius: 50%;
+}
+
+.form-contact .form-contact-field.toggle-field label span {
+  position: relative;
+  width: calc(2em + (2 * 1px));
+  height: calc(1em + (2 * 1px));
+  border-radius: 1em;
+  border: 1px solid var(--dark-color);
+  background-color: var(--dark-color);
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.form-contact .form-contact-field.toggle-field label span::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  transition: left 0.2s;
+}
+
+.form-contact .form-contact-field.toggle-field label input:checked + span {
+  background-color: var(--link-color);
+}
+
+.form-contact .form-contact-field.toggle-field label input:checked + span::after {
+  left: calc(100% - 1em);
+}
+
+.form-contact .form-contact-field.toggle-field label input:disabled + span {
+  border-color: #d1d1d1;
+  background-color: #d1d1d1;
+  cursor: default;
+}
+
+.form-contact .form-contact-field.toggle-field label input:disabled + span::after {
+  background-color: var(--light-color);
+}
+
+.form-contact .field-help-text {
+  margin-top: 0.2em;
+  color: var(--dark-color);
+  font-size: var(--body-font-size-xs);
+}
+
+.form-contact .button-wrapper {
+  margin-top: 16px;
+}
+
+.form-contact .button-wrapper button.button {
+  width: 100%;
+  border: 1px solid var(--brand-red);
+  border-radius: 4px;
+  padding: 6px 12px;
+  background-color: transparent;
+  color: var(--brand-red);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  white-space: normal;
+}
+
+.form-contact .button-wrapper button.button:hover,
+.form-contact .button-wrapper button.button:focus-visible {
+  border-color: var(--brand-red-dark);
+  background-color: var(--brand-red);
+  color: #fff;
+}
+
+.form-contact .button-wrapper button.button:disabled,
+.form-contact .button-wrapper button.button:hover:disabled {
+  border-color: var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--background-color);
+  cursor: progress;
+}
+
+.form-contact .button-wrapper button.button.secondary:disabled,
+.form-contact .button-wrapper button.button.secondary:hover:disabled {
+  border-color: var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+@media (width >= 600px) {
+  .form-contact .button-wrapper {
+    display: block;
+  }
+
+  .form-contact .button-wrapper button.button {
+    width: 100%;
+  }
+}

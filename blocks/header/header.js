@@ -116,7 +116,9 @@ export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
   const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
-  const fragment = await loadFragment(navPath);
+  // Try local content path first (aem up serves content under /content), then the
+  // production nav path (DA/EDS serves nav at root).
+  const fragment = (await loadFragment('/content/nav')) || (await loadFragment(navPath));
 
   // decorate nav DOM
   block.textContent = '';

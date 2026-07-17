@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-cover",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-07-17T16:32:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://emergient.com/",
+    "originPage": "Emergient homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + subheading + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "full-width cover hero banners with a photographic background image",
+      "page intros with a background image, white text and a single CTA",
+      "landing pages requiring a high-impact above-the-fold banner"
+    ],
+    "notSuitableFor": [
+      "text-only heros with no background image",
+      "simple heading/paragraph intros that can be authored as default content",
+      "content sections requiring side-by-side layout (use columns)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index", "/services-and-benefits/index"],
+    "reuseCount": 2,
+    "lastUsed": "2026-07-17T16:34:00.000Z"
+  }
+}

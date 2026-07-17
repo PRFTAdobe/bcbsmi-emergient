@@ -1,0 +1,40 @@
+{
+  "variantName": "form-contact",
+  "baseBlock": "form",
+  "version": "1.0.0",
+  "created": "2026-07-17T16:37:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://emergient.com/contact/",
+    "originPage": "Emergient Contact page (coverage-gap variant of the content-page template)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "contact-form",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "name + email + subject + message + submit",
+    "buttonCount": 1,
+    "imageCount": 0,
+    "fieldCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "simple contact forms with text/email inputs, a textarea and a submit button",
+      "lead-capture forms on interior content pages",
+      "any form driven by a form definition (JSON) rendered by the form block"
+    ],
+    "notSuitableFor": [
+      "multi-step or wizard forms",
+      "forms with complex conditional branching that need bespoke layout",
+      "non-form content that can be authored as default content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/contact/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-07-17T16:37:00.000Z"
+  }
+}

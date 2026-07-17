@@ -1,0 +1,70 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "home",
+      "urls": [
+        "https://emergient.com/"
+      ],
+      "representativeUrl": "https://emergient.com/",
+      "coverageGaps": [],
+      "description": "Homepage with full-width hero cover (background image + heading, paragraphs, CTA button)",
+      "blocks": [
+        {
+          "name": "hero-cover",
+          "instances": [
+            "div.wp-block-cover.alignfull.is-light",
+            ".entry-content > .wp-block-cover"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "content-page",
+      "urls": [
+        "https://emergient.com/services-and-benefits/",
+        "https://emergient.com/about-emergient/",
+        "https://emergient.com/contact/"
+      ],
+      "representativeUrl": "https://emergient.com/services-and-benefits/",
+      "coverageGaps": [
+        {
+          "url": "https://emergient.com/contact/",
+          "sections": [
+            { "sectionSignature": "contact-form", "nodeMapId": "rc2c1c2c3" }
+          ]
+        }
+      ],
+      "description": "Interior content page with hero cover banner and two-column content; contact variant includes a contact form",
+      "blocks": [
+        {
+          "name": "hero-cover",
+          "instances": [
+            "div.wp-block-cover.alignfull.has-custom-content-position",
+            ".entry-content > .wp-block-cover"
+          ]
+        },
+        {
+          "name": "form-contact",
+          "instances": [
+            "div.wp-block-contact-form-7-contact-form-selector",
+            ".wpcf7"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "legal-page",
+      "urls": [
+        "https://emergient.com/privacy-policy/",
+        "https://emergient.com/terms-and-conditions/"
+      ],
+      "representativeUrl": "https://emergient.com/privacy-policy/",
+      "coverageGaps": [],
+      "description": "Legal/policy page with page title heading and long-form body text; entirely default content",
+      "blocks": []
+    }
+  ]
+}
