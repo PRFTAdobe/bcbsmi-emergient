@@ -1,0 +1,10 @@
+ "sidekick": {
+    "project": "Emergient",
+    "editUrlPattern": "https://da.live/canvas#/prftadobe/bcbsmi-emergient{{pathname}}",
+    "plugins": [
+    {
+      "id": "publish",
+      "confirm": true
+    }
+  ]
+ }
