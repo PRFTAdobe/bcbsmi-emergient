@@ -1,5 +1,3 @@
-@import url('brand.css');
-
 /*
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -13,7 +11,18 @@
  */
 
 :root {
-  /* colors (brand values live in brand.css) */
+  /* brand tokens (inlined from brand.css to avoid render-blocking @import) */
+  --heading-font-family: "Titillium Web", "Titillium Web Fallback", sans-serif;
+  --body-font-family: "Titillium Web", "Titillium Web Fallback", sans-serif;
+  --background-color: #fff;
+  --text-color: #0e0e0e;
+  --link-color: #ff4814;
+  --link-hover-color: #cc3a10;
+  --brand-red: #ff4814;
+  --brand-red-dark: #cc3a10;
+  --content-max-width: 1320px;
+
+  /* colors */
   --light-color: #f4f4f4;
   --dark-color: #0e0e0e;
 
